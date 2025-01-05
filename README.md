@@ -24,8 +24,14 @@ Try the live demo: [SocioAI Deployment](https://v0-socio-ai-analysis-nuvyx16fu-s
 
 - **Frontend**: React.js
 - **Backend**: Node.js (Express.js)
-- **AI Models**: Integrated AI models for sentiment analysis and language understanding.
+- **AI Models**: Created a Langflow pipeline for handling AI requests.
 - **Deployment**: Vercel
+
+---
+
+## Langflow Architecture
+
+<img width="848" alt="image" src="https://github.com/user-attachments/assets/26783783-e5c3-4837-992c-70337281de70" />
 
 ---
 
