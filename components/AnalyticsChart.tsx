@@ -35,6 +35,16 @@ export default function AnalyticsChart({ data }: AnalyticsChartProps) {
   const metricHeaders = data.headers.filter(header => 
     !['Post Type', 'post_id', 'Total Posts'].includes(header)
   )
+  // Check if required metrics are present
+  const requiredMetrics = ['likes', 'shares', 'comments']
+  const hasRequiredMetrics = requiredMetrics.every(metric => 
+    metricHeaders.some(header => header.toLowerCase().includes(metric))
+  )
+
+  if (!hasRequiredMetrics) {
+    console.warn('Required metrics not found in headers:', metricHeaders)
+    return null
+  }
 
   // Get indices for metrics
   const metricsIndices = metricHeaders.reduce<Record<string, number>>((acc, header) => ({
