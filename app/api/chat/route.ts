@@ -7,6 +7,7 @@ const API_URL = "https://api.langflow.astra.datastax.com"
 const LANGFLOW_ID = "7e084384-03af-44c8-926d-b906e0c278f9"
 const APPLICATION_TOKEN = process.env.APPLICATION_TOKEN
 const ENDPOINT = "socioai"
+console.log('APPLICATION_TOKEN:', APPLICATION_TOKEN)
 
 export async function POST(req: NextRequest) {
   try {
@@ -18,13 +19,13 @@ export async function POST(req: NextRequest) {
       input_value: message,
       output_type: "chat",
       input_type: "chat",
-      tweaks: {
-        "Prompt-wXuZu": {},
-        "Agent-lgaEv": {},
-        "AstraDBToolComponent-E8wqU": {},
-        "ChatInput-UBrdS": {},
-        "ChatOutput-ctttH": {}
-      }
+      // tweaks: {
+      //   "Prompt-wXuZu": {},
+      //   "Agent-lgaEv": {},
+      //   "AstraDBToolComponent-E8wqU": {},
+      //   "ChatInput-UBrdS": {},
+      //   "ChatOutput-ctttH": {}
+      // }
     }
 
     console.log('Request payload to Langflow:', JSON.stringify(payload, null, 2))
