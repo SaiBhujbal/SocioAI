@@ -10,7 +10,7 @@ import ChatMessage from '@/components/ChatMessage'
 import { motion } from 'framer-motion'
 
 export default function Chat() {
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState<Array<{ role: string; content: string; data?: any }>>([])
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
