@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     console.log('Sending request to Langflow API:', { message })
 
     const payload = {
-      input_value: message,
+      input_value: message.trim(),
       output_type: "chat",
       input_type: "chat",
       // tweaks: {
