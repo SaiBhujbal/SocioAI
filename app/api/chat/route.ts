@@ -5,7 +5,7 @@ dotenv.config()
 
 const API_URL = "https://api.langflow.astra.datastax.com"
 const LANGFLOW_ID = "7e084384-03af-44c8-926d-b906e0c278f9"
-const APPLICATION_TOKEN = "AstraCS:iFpdFfCSwkaDzNxxMcaZjwGK:cde8d937e7266a59532112e9eae6fd01ecb1a38cbae4508996a333622834082c"
+const APPLICATION_TOKEN = process.env.APPLICATION_TOKEN
 const ENDPOINT = "socioai"
 
 export async function POST(req: NextRequest) {
