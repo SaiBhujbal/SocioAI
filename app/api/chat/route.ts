@@ -12,13 +12,11 @@ console.log('APPLICATION_TOKEN:', APPLICATION_TOKEN)
 export async function POST(req: NextRequest) {
   try {
     const { message } = await req.json()
-
-    const trimmedMessage = message.trim()
-
-    console.log('Sending request to Langflow API:', { trimmedMessage })
+    
+    console.log('Sending request to Langflow API:', { message })
 
     const payload = {
-      input_value: trimmedMessage,
+      input_value: message,
       output_type: "chat",
       input_type: "chat",
       // tweaks: {
